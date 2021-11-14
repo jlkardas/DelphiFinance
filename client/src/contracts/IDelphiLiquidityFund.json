@@ -1,0 +1,197 @@
+{
+  "contractName": "IDelphiLiquidityFund",
+  "abi": [
+    {
+      "constant": false,
+      "inputs": [],
+      "name": "initialize",
+      "outputs": [],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    }
+  ],
+  "metadata": "{\"compiler\":{\"version\":\"0.5.16+commit.9c3226ce\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"constant\":false,\"inputs\":[],\"name\":\"initialize\",\"outputs\":[],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"}],\"devdoc\":{\"methods\":{}},\"userdoc\":{\"methods\":{}}},\"settings\":{\"compilationTarget\":{\"project:/contracts/interfaces/IDelphiLiquidityFund.sol\":\"IDelphiLiquidityFund\"},\"evmVersion\":\"istanbul\",\"libraries\":{},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"project:/contracts/interfaces/IDelphiLiquidityFund.sol\":{\"keccak256\":\"0xb4dcb7153665aeae1ee4e1ee130b300808de1adb18dc7e80239708fe05625fe6\",\"urls\":[\"bzz-raw://605582bf9e9845c4250eb559c7f160d798ccd99d6a92787b2c5b16a4f32f90c2\",\"dweb:/ipfs/QmX3fCUjqjtYZto4EvmdK2ZxEZLUJbmSWEZ6JtjF12ydmY\"]}},\"version\":1}",
+  "bytecode": "0x",
+  "deployedBytecode": "0x",
+  "sourceMap": "",
+  "deployedSourceMap": "",
+  "source": "pragma solidity >=0.5.7;\n\ninterface IDelphiLiquidityFund {\n    function initialize() external;\n}\n",
+  "sourcePath": "/Users/jessekardas/Developer/Web3/DelphiFinance/contracts/interfaces/IDelphiLiquidityFund.sol",
+  "ast": {
+    "absolutePath": "project:/contracts/interfaces/IDelphiLiquidityFund.sol",
+    "exportedSymbols": {
+      "IDelphiLiquidityFund": [
+        120
+      ]
+    },
+    "id": 121,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 116,
+        "literals": [
+          "solidity",
+          ">=",
+          "0.5",
+          ".7"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:24:2"
+      },
+      {
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "interface",
+        "documentation": null,
+        "fullyImplemented": false,
+        "id": 120,
+        "linearizedBaseContracts": [
+          120
+        ],
+        "name": "IDelphiLiquidityFund",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "body": null,
+            "documentation": null,
+            "id": 119,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "initialize",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 117,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "82:2:2"
+            },
+            "returnParameters": {
+              "id": 118,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "93:0:2"
+            },
+            "scope": 120,
+            "src": "63:31:2",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "external"
+          }
+        ],
+        "scope": 121,
+        "src": "26:70:2"
+      }
+    ],
+    "src": "0:97:2"
+  },
+  "legacyAST": {
+    "attributes": {
+      "absolutePath": "project:/contracts/interfaces/IDelphiLiquidityFund.sol",
+      "exportedSymbols": {
+        "IDelphiLiquidityFund": [
+          120
+        ]
+      }
+    },
+    "children": [
+      {
+        "attributes": {
+          "literals": [
+            "solidity",
+            ">=",
+            "0.5",
+            ".7"
+          ]
+        },
+        "id": 116,
+        "name": "PragmaDirective",
+        "src": "0:24:2"
+      },
+      {
+        "attributes": {
+          "baseContracts": [
+            null
+          ],
+          "contractDependencies": [
+            null
+          ],
+          "contractKind": "interface",
+          "documentation": null,
+          "fullyImplemented": false,
+          "linearizedBaseContracts": [
+            120
+          ],
+          "name": "IDelphiLiquidityFund",
+          "scope": 121
+        },
+        "children": [
+          {
+            "attributes": {
+              "body": null,
+              "documentation": null,
+              "implemented": false,
+              "isConstructor": false,
+              "kind": "function",
+              "modifiers": [
+                null
+              ],
+              "name": "initialize",
+              "scope": 120,
+              "stateMutability": "nonpayable",
+              "superFunction": null,
+              "visibility": "external"
+            },
+            "children": [
+              {
+                "attributes": {
+                  "parameters": [
+                    null
+                  ]
+                },
+                "children": [],
+                "id": 117,
+                "name": "ParameterList",
+                "src": "82:2:2"
+              },
+              {
+                "attributes": {
+                  "parameters": [
+                    null
+                  ]
+                },
+                "children": [],
+                "id": 118,
+                "name": "ParameterList",
+                "src": "93:0:2"
+              }
+            ],
+            "id": 119,
+            "name": "FunctionDefinition",
+            "src": "63:31:2"
+          }
+        ],
+        "id": 120,
+        "name": "ContractDefinition",
+        "src": "26:70:2"
+      }
+    ],
+    "id": 121,
+    "name": "SourceUnit",
+    "src": "0:97:2"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.5.16+commit.9c3226ce.Emscripten.clang"
+  },
+  "networks": {},
+  "schemaVersion": "3.4.3",
+  "updatedAt": "2021-11-14T03:43:18.055Z",
+  "devdoc": {
+    "methods": {}
+  },
+  "userdoc": {
+    "methods": {}
+  }
+}

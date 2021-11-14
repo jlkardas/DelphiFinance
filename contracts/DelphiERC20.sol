@@ -3,7 +3,7 @@ pragma solidity >=0.5.0;
 import "./interfaces/IDelphiERC20.sol";
 import "./libraries/SafeMath.sol";
 
-contract ERC20 is IERC20 {
+contract DelphiERC20 is IDelphiERC20 {
     using SafeMath for uint256;
 
     string public constant name = "Uniswap V2";

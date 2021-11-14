@@ -1,0 +1,2049 @@
+{
+  "contractName": "DelphiFactory",
+  "abi": [
+    {
+      "inputs": [],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "constructor"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": false,
+          "internalType": "address",
+          "name": "fund",
+          "type": "address"
+        },
+        {
+          "indexed": false,
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "name": "FundCreated",
+      "type": "event"
+    },
+    {
+      "constant": true,
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "name": "allFunds",
+      "outputs": [
+        {
+          "internalType": "address",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "token",
+          "type": "uint256"
+        }
+      ],
+      "name": "createFund",
+      "outputs": [
+        {
+          "internalType": "address",
+          "name": "fund",
+          "type": "address"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "getAllFunds",
+      "outputs": [
+        {
+          "internalType": "address[]",
+          "name": "",
+          "type": "address[]"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    }
+  ],
+  "metadata": "{\"compiler\":{\"version\":\"0.5.16+commit.9c3226ce\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"constructor\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":false,\"internalType\":\"address\",\"name\":\"fund\",\"type\":\"address\"},{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"name\":\"FundCreated\",\"type\":\"event\"},{\"constant\":true,\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"name\":\"allFunds\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":false,\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"token\",\"type\":\"uint256\"}],\"name\":\"createFund\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"fund\",\"type\":\"address\"}],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[],\"name\":\"getAllFunds\",\"outputs\":[{\"internalType\":\"address[]\",\"name\":\"\",\"type\":\"address[]\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"}],\"devdoc\":{\"methods\":{}},\"userdoc\":{\"methods\":{}}},\"settings\":{\"compilationTarget\":{\"project:/contracts/DelphiFactory.sol\":\"DelphiFactory\"},\"evmVersion\":\"istanbul\",\"libraries\":{},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"project:/contracts/DelphiFactory.sol\":{\"keccak256\":\"0xb7165b5d5557cb040928a1f12a2d4427fa058233f4b68e25fcc9d2cce96bb0e5\",\"urls\":[\"bzz-raw://ceef4b3ec83d6ca116bb99d2b84f1766630d96dad3ed7e2da139804f42a6e39d\",\"dweb:/ipfs/QmTbSA8s43W83WoPMFZS5nchjRP4Cumu9eDGCCnFZiV8PU\"]},\"project:/contracts/DelphiLiquidityFund.sol\":{\"keccak256\":\"0x331efcc990db76a44e6fbbf9ccb5f16c93aef203815c78fe96c51a958aff703f\",\"urls\":[\"bzz-raw://8cd7b996d95feacce6a0ea524487802b08bc082f11866324515fed845b713669\",\"dweb:/ipfs/QmRcYMZYtpCqQKhJ1VmX3znoN6pzLrbuGxheQkZPdxtFiq\"]},\"project:/contracts/interfaces/IDelphiLiquidityFund.sol\":{\"keccak256\":\"0xb4dcb7153665aeae1ee4e1ee130b300808de1adb18dc7e80239708fe05625fe6\",\"urls\":[\"bzz-raw://605582bf9e9845c4250eb559c7f160d798ccd99d6a92787b2c5b16a4f32f90c2\",\"dweb:/ipfs/QmX3fCUjqjtYZto4EvmdK2ZxEZLUJbmSWEZ6JtjF12ydmY\"]},\"project:/contracts/interfaces/IERC20.sol\":{\"keccak256\":\"0xeba4b3e51e709948cfe2719ced956a3a9a289eddf10baaf0b075188274b566f3\",\"urls\":[\"bzz-raw://08fca62445244b387e784073dc4ed4441dad8bccbd5342124f862d678cab7a56\",\"dweb:/ipfs/QmX8qoBzsTR2yz1grCpdifGUeXCFiAM7vktB5wgU2ZKpVp\"]}},\"version\":1}",
+  "bytecode": "0x608060405234801561001057600080fd5b50610731806100206000396000f3fe608060405234801561001057600080fd5b50600436106100415760003560e01c80631c69b4641461004657806342fa0713146100a5578063e7a2843114610113575b600080fd5b61004e610181565b6040518080602001828103825283818151815260200191508051906020019060200280838360005b83811015610091578082015181840152602081019050610076565b505050509050019250505060405180910390f35b6100d1600480360360208110156100bb57600080fd5b810190808035906020019092919050505061020f565b604051808273ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200191505060405180910390f35b61013f6004803603602081101561012957600080fd5b81019080803590602001909291905050506103ac565b604051808273ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200191505060405180910390f35b6060600080548060200260200160405190810160405280929190818152602001828054801561020557602002820191906000526020600020905b8160009054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200190600101908083116101bb575b5050505050905090565b600080826040516020018082815260200191505060405160208183030381529060405280519060200120905060606040518060200161024d906103e8565b6020820181038252601f19601f820116604052509050818151602083016000f592508273ffffffffffffffffffffffffffffffffffffffff16638129fc1c6040518163ffffffff1660e01b8152600401600060405180830381600087803b1580156102b757600080fd5b505af11580156102cb573d6000803e3d6000fd5b5050505060008390806001815401808255809150509060018203906000526020600020016000909192909190916101000a81548173ffffffffffffffffffffffffffffffffffffffff021916908373ffffffffffffffffffffffffffffffffffffffff160217905550507fd73eaec0e4004d47dc7e75d1697ffa2474f0e33eaa6915e361ed2299e355dfc483600080549050604051808373ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff1681526020018281526020019250505060405180910390a15050919050565b600081815481106103b957fe5b906000526020600020016000915054906101000a900473ffffffffffffffffffffffffffffffffffffffff1681565b610307806103f68339019056fe608060405234801561001057600080fd5b50336000806101000a81548173ffffffffffffffffffffffffffffffffffffffff021916908373ffffffffffffffffffffffffffffffffffffffff1602179055506102a7806100606000396000f3fe608060405234801561001057600080fd5b506004361061004c5760003560e01c806312065fe01461005157806327e235e31461006f5780638129fc1c146100c7578063d91921ed146100d1575b600080fd5b6100596100ff565b6040518082815260200191505060405180910390f35b6100b16004803603602081101561008557600080fd5b81019080803573ffffffffffffffffffffffffffffffffffffffff169060200190929190505050610146565b6040518082815260200191505060405180910390f35b6100cf61015e565b005b6100fd600480360360208110156100e757600080fd5b8101908080359060200190929190505050610222565b005b6000600160003373ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200190815260200160002054905090565b60016020528060005260406000206000915090505481565b6000809054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff163373ffffffffffffffffffffffffffffffffffffffff1614610220576040517f08c379a00000000000000000000000000000000000000000000000000000000081526004018080602001828103825260108152602001807f44656c70686920464f5242494444454e0000000000000000000000000000000081525060200191505060405180910390fd5b565b80600160003373ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff168152602001908152602001600020600082825401925050819055505056fea265627a7a72315820790059608381ec966b36a368a28bf4368910b0009a8bc70488901c827d06feb664736f6c63430005100032a265627a7a723158203f0a5f8daa13543d7ffe94c814397e6812e8ae112cb7a6f797cac1d727000aba64736f6c63430005100032",
+  "deployedBytecode": "0x608060405234801561001057600080fd5b50600436106100415760003560e01c80631c69b4641461004657806342fa0713146100a5578063e7a2843114610113575b600080fd5b61004e610181565b6040518080602001828103825283818151815260200191508051906020019060200280838360005b83811015610091578082015181840152602081019050610076565b505050509050019250505060405180910390f35b6100d1600480360360208110156100bb57600080fd5b810190808035906020019092919050505061020f565b604051808273ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200191505060405180910390f35b61013f6004803603602081101561012957600080fd5b81019080803590602001909291905050506103ac565b604051808273ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200191505060405180910390f35b6060600080548060200260200160405190810160405280929190818152602001828054801561020557602002820191906000526020600020905b8160009054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200190600101908083116101bb575b5050505050905090565b600080826040516020018082815260200191505060405160208183030381529060405280519060200120905060606040518060200161024d906103e8565b6020820181038252601f19601f820116604052509050818151602083016000f592508273ffffffffffffffffffffffffffffffffffffffff16638129fc1c6040518163ffffffff1660e01b8152600401600060405180830381600087803b1580156102b757600080fd5b505af11580156102cb573d6000803e3d6000fd5b5050505060008390806001815401808255809150509060018203906000526020600020016000909192909190916101000a81548173ffffffffffffffffffffffffffffffffffffffff021916908373ffffffffffffffffffffffffffffffffffffffff160217905550507fd73eaec0e4004d47dc7e75d1697ffa2474f0e33eaa6915e361ed2299e355dfc483600080549050604051808373ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff1681526020018281526020019250505060405180910390a15050919050565b600081815481106103b957fe5b906000526020600020016000915054906101000a900473ffffffffffffffffffffffffffffffffffffffff1681565b610307806103f68339019056fe608060405234801561001057600080fd5b50336000806101000a81548173ffffffffffffffffffffffffffffffffffffffff021916908373ffffffffffffffffffffffffffffffffffffffff1602179055506102a7806100606000396000f3fe608060405234801561001057600080fd5b506004361061004c5760003560e01c806312065fe01461005157806327e235e31461006f5780638129fc1c146100c7578063d91921ed146100d1575b600080fd5b6100596100ff565b6040518082815260200191505060405180910390f35b6100b16004803603602081101561008557600080fd5b81019080803573ffffffffffffffffffffffffffffffffffffffff169060200190929190505050610146565b6040518082815260200191505060405180910390f35b6100cf61015e565b005b6100fd600480360360208110156100e757600080fd5b8101908080359060200190929190505050610222565b005b6000600160003373ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200190815260200160002054905090565b60016020528060005260406000206000915090505481565b6000809054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff163373ffffffffffffffffffffffffffffffffffffffff1614610220576040517f08c379a00000000000000000000000000000000000000000000000000000000081526004018080602001828103825260108152602001807f44656c70686920464f5242494444454e0000000000000000000000000000000081525060200191505060405180910390fd5b565b80600160003373ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff168152602001908152602001600020600082825401925050819055505056fea265627a7a72315820790059608381ec966b36a368a28bf4368910b0009a8bc70488901c827d06feb664736f6c63430005100032a265627a7a723158203f0a5f8daa13543d7ffe94c814397e6812e8ae112cb7a6f797cac1d727000aba64736f6c63430005100032",
+  "sourceMap": "97:677:0:-;;;205:23;8:9:-1;5:2;;;30:1;27;20:12;5:2;205:23:0;97:677;;;;;;",
+  "deployedSourceMap": "97:677:0:-;;;;8:9:-1;5:2;;;30:1;27;20:12;5:2;97:677:0;;;;;;;;;;;;;;;;;;;;;;;;;;;;;676:96;;;:::i;:::-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;23:1:-1;8:100;33:3;30:1;27:10;8:100;;;99:1;94:3;90:11;84:18;80:1;75:3;71:11;64:39;52:2;49:1;45:10;40:15;;8:100;;;12:14;676:96:0;;;;;;;;;;;;;;;;;234:436;;;;;;13:2:-1;8:3;5:11;2:2;;;29:1;26;19:12;2:2;234:436:0;;;;;;;;;;;;;;;;;:::i;:::-;;;;;;;;;;;;;;;;;;;;;;;126:25;;;;;;13:2:-1;8:3;5:11;2:2;;;29:1;26;19:12;2:2;126:25:0;;;;;;;;;;;;;;;;;:::i;:::-;;;;;;;;;;;;;;;;;;;;;;;676:96;722:16;757:8;750:15;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;676:96;:::o;234:436::-;287:12;311;353:5;336:23;;;;;;;;;;;;;;;49:4:-1;39:7;30;26:21;22:32;13:7;6:49;336:23:0;;;326:34;;;;;;311:49;;370:21;394:38;;;;;;;;:::i;:::-;41:4:-1;34:5;30:16;25:3;21:26;14:5;7:41;87:2;83:7;78:2;73:3;69:12;65:26;61:2;54:38;394::0;370:62;;522:4;511:8;505:15;498:4;488:8;484:19;481:1;473:54;465:62;;567:4;546:37;;;:39;;;;;;;;;;;;;;;;;;;;;;;8:9:-1;5:2;;;30:1;27;20:12;5:2;546:39:0;;;;8:9:-1;5:2;;;45:16;42:1;39;24:38;77:16;74:1;67:27;5:2;546:39:0;;;;595:8;609:4;595:19;;39:1:-1;33:3;27:10;23:18;57:10;52:3;45:23;79:10;72:17;;0:93;595:19:0;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;629:34;641:4;647:8;:15;;;;629:34;;;;;;;;;;;;;;;;;;;;;;;;;;;;234:436;;;;;:::o;126:25::-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::o;97:677::-;;;;;;;;:::o",
+  "source": "pragma solidity >=0.5.7;\n\nimport \"./interfaces/IERC20.sol\";\nimport \"./DelphiLiquidityFund.sol\";\n\ncontract DelphiFactory {\n    address[] public allFunds;\n\n    event FundCreated(address fund, uint256);\n\n    constructor() public {}\n\n    function createFund(uint256 token) external returns (address fund) {\n        bytes32 salt = keccak256(abi.encodePacked(token));\n        bytes memory bytecode = type(DelphiLiquidityFund).creationCode;\n        assembly {\n            fund := create2(0, add(bytecode, 0x20), mload(bytecode), salt)\n        }\n        IDelphiLiquidityFund(fund).initialize();\n        allFunds.push(fund);\n        emit FundCreated(fund, allFunds.length);\n    }\n\n    function getAllFunds() external view returns (address[] memory) {\n        return allFunds;\n    }\n}\n",
+  "sourcePath": "/Users/jessekardas/Developer/Web3/DelphiFinance/contracts/DelphiFactory.sol",
+  "ast": {
+    "absolutePath": "project:/contracts/DelphiFactory.sol",
+    "exportedSymbols": {
+      "DelphiFactory": [
+        69
+      ]
+    },
+    "id": 70,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 1,
+        "literals": [
+          "solidity",
+          ">=",
+          "0.5",
+          ".7"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:24:0"
+      },
+      {
+        "absolutePath": "project:/contracts/interfaces/IERC20.sol",
+        "file": "./interfaces/IERC20.sol",
+        "id": 2,
+        "nodeType": "ImportDirective",
+        "scope": 70,
+        "sourceUnit": 217,
+        "src": "26:33:0",
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "absolutePath": "project:/contracts/DelphiLiquidityFund.sol",
+        "file": "./DelphiLiquidityFund.sol",
+        "id": 3,
+        "nodeType": "ImportDirective",
+        "scope": 70,
+        "sourceUnit": 127,
+        "src": "60:35:0",
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "baseContracts": [],
+        "contractDependencies": [
+          126
+        ],
+        "contractKind": "contract",
+        "documentation": null,
+        "fullyImplemented": true,
+        "id": 69,
+        "linearizedBaseContracts": [
+          69
+        ],
+        "name": "DelphiFactory",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "constant": false,
+            "id": 6,
+            "name": "allFunds",
+            "nodeType": "VariableDeclaration",
+            "scope": 69,
+            "src": "126:25:0",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_array$_t_address_$dyn_storage",
+              "typeString": "address[]"
+            },
+            "typeName": {
+              "baseType": {
+                "id": 4,
+                "name": "address",
+                "nodeType": "ElementaryTypeName",
+                "src": "126:7:0",
+                "stateMutability": "nonpayable",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_address",
+                  "typeString": "address"
+                }
+              },
+              "id": 5,
+              "length": null,
+              "nodeType": "ArrayTypeName",
+              "src": "126:9:0",
+              "typeDescriptions": {
+                "typeIdentifier": "t_array$_t_address_$dyn_storage_ptr",
+                "typeString": "address[]"
+              }
+            },
+            "value": null,
+            "visibility": "public"
+          },
+          {
+            "anonymous": false,
+            "documentation": null,
+            "id": 12,
+            "name": "FundCreated",
+            "nodeType": "EventDefinition",
+            "parameters": {
+              "id": 11,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 8,
+                  "indexed": false,
+                  "name": "fund",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 12,
+                  "src": "176:12:0",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 7,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "176:7:0",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 10,
+                  "indexed": false,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 12,
+                  "src": "190:7:0",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 9,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "190:7:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "175:23:0"
+            },
+            "src": "158:41:0"
+          },
+          {
+            "body": {
+              "id": 15,
+              "nodeType": "Block",
+              "src": "226:2:0",
+              "statements": []
+            },
+            "documentation": null,
+            "id": 16,
+            "implemented": true,
+            "kind": "constructor",
+            "modifiers": [],
+            "name": "",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 13,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "216:2:0"
+            },
+            "returnParameters": {
+              "id": 14,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "226:0:0"
+            },
+            "scope": 69,
+            "src": "205:23:0",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 58,
+              "nodeType": "Block",
+              "src": "301:369:0",
+              "statements": [
+                {
+                  "assignments": [
+                    24
+                  ],
+                  "declarations": [
+                    {
+                      "constant": false,
+                      "id": 24,
+                      "name": "salt",
+                      "nodeType": "VariableDeclaration",
+                      "scope": 58,
+                      "src": "311:12:0",
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_bytes32",
+                        "typeString": "bytes32"
+                      },
+                      "typeName": {
+                        "id": 23,
+                        "name": "bytes32",
+                        "nodeType": "ElementaryTypeName",
+                        "src": "311:7:0",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_bytes32",
+                          "typeString": "bytes32"
+                        }
+                      },
+                      "value": null,
+                      "visibility": "internal"
+                    }
+                  ],
+                  "id": 31,
+                  "initialValue": {
+                    "argumentTypes": null,
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "arguments": [
+                          {
+                            "argumentTypes": null,
+                            "id": 28,
+                            "name": "token",
+                            "nodeType": "Identifier",
+                            "overloadedDeclarations": [],
+                            "referencedDeclaration": 18,
+                            "src": "353:5:0",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_uint256",
+                              "typeString": "uint256"
+                            }
+                          }
+                        ],
+                        "expression": {
+                          "argumentTypes": [
+                            {
+                              "typeIdentifier": "t_uint256",
+                              "typeString": "uint256"
+                            }
+                          ],
+                          "expression": {
+                            "argumentTypes": null,
+                            "id": 26,
+                            "name": "abi",
+                            "nodeType": "Identifier",
+                            "overloadedDeclarations": [],
+                            "referencedDeclaration": 218,
+                            "src": "336:3:0",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_magic_abi",
+                              "typeString": "abi"
+                            }
+                          },
+                          "id": 27,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": true,
+                          "lValueRequested": false,
+                          "memberName": "encodePacked",
+                          "nodeType": "MemberAccess",
+                          "referencedDeclaration": null,
+                          "src": "336:16:0",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_function_abiencodepacked_pure$__$returns$_t_bytes_memory_ptr_$",
+                            "typeString": "function () pure returns (bytes memory)"
+                          }
+                        },
+                        "id": 29,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": false,
+                        "kind": "functionCall",
+                        "lValueRequested": false,
+                        "names": [],
+                        "nodeType": "FunctionCall",
+                        "src": "336:23:0",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_bytes_memory_ptr",
+                          "typeString": "bytes memory"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_bytes_memory_ptr",
+                          "typeString": "bytes memory"
+                        }
+                      ],
+                      "id": 25,
+                      "name": "keccak256",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 225,
+                      "src": "326:9:0",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_keccak256_pure$_t_bytes_memory_ptr_$returns$_t_bytes32_$",
+                        "typeString": "function (bytes memory) pure returns (bytes32)"
+                      }
+                    },
+                    "id": 30,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "326:34:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes32",
+                      "typeString": "bytes32"
+                    }
+                  },
+                  "nodeType": "VariableDeclarationStatement",
+                  "src": "311:49:0"
+                },
+                {
+                  "assignments": [
+                    33
+                  ],
+                  "declarations": [
+                    {
+                      "constant": false,
+                      "id": 33,
+                      "name": "bytecode",
+                      "nodeType": "VariableDeclaration",
+                      "scope": 58,
+                      "src": "370:21:0",
+                      "stateVariable": false,
+                      "storageLocation": "memory",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_bytes_memory_ptr",
+                        "typeString": "bytes"
+                      },
+                      "typeName": {
+                        "id": 32,
+                        "name": "bytes",
+                        "nodeType": "ElementaryTypeName",
+                        "src": "370:5:0",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_bytes_storage_ptr",
+                          "typeString": "bytes"
+                        }
+                      },
+                      "value": null,
+                      "visibility": "internal"
+                    }
+                  ],
+                  "id": 38,
+                  "initialValue": {
+                    "argumentTypes": null,
+                    "expression": {
+                      "argumentTypes": null,
+                      "arguments": [
+                        {
+                          "argumentTypes": null,
+                          "id": 35,
+                          "name": "DelphiLiquidityFund",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 126,
+                          "src": "399:19:0",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_type$_t_contract$_DelphiLiquidityFund_$126_$",
+                            "typeString": "type(contract DelphiLiquidityFund)"
+                          }
+                        }
+                      ],
+                      "expression": {
+                        "argumentTypes": [
+                          {
+                            "typeIdentifier": "t_type$_t_contract$_DelphiLiquidityFund_$126_$",
+                            "typeString": "type(contract DelphiLiquidityFund)"
+                          }
+                        ],
+                        "id": 34,
+                        "name": "type",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 244,
+                        "src": "394:4:0",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_function_metatype_pure$_t_address_$returns$__$",
+                          "typeString": "function (address) pure"
+                        }
+                      },
+                      "id": 36,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": true,
+                      "kind": "functionCall",
+                      "lValueRequested": false,
+                      "names": [],
+                      "nodeType": "FunctionCall",
+                      "src": "394:25:0",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_magic_meta_type_t_contract$_DelphiLiquidityFund_$126",
+                        "typeString": "type(contract DelphiLiquidityFund)"
+                      }
+                    },
+                    "id": 37,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": true,
+                    "lValueRequested": false,
+                    "memberName": "creationCode",
+                    "nodeType": "MemberAccess",
+                    "referencedDeclaration": null,
+                    "src": "394:38:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes_memory_ptr",
+                      "typeString": "bytes memory"
+                    }
+                  },
+                  "nodeType": "VariableDeclarationStatement",
+                  "src": "370:62:0"
+                },
+                {
+                  "externalReferences": [
+                    {
+                      "fund": {
+                        "declaration": 21,
+                        "isOffset": false,
+                        "isSlot": false,
+                        "src": "465:4:0",
+                        "valueSize": 1
+                      }
+                    },
+                    {
+                      "bytecode": {
+                        "declaration": 33,
+                        "isOffset": false,
+                        "isSlot": false,
+                        "src": "511:8:0",
+                        "valueSize": 1
+                      }
+                    },
+                    {
+                      "bytecode": {
+                        "declaration": 33,
+                        "isOffset": false,
+                        "isSlot": false,
+                        "src": "488:8:0",
+                        "valueSize": 1
+                      }
+                    },
+                    {
+                      "salt": {
+                        "declaration": 24,
+                        "isOffset": false,
+                        "isSlot": false,
+                        "src": "522:4:0",
+                        "valueSize": 1
+                      }
+                    }
+                  ],
+                  "id": 39,
+                  "nodeType": "InlineAssembly",
+                  "operations": "{\n    fund := create2(0, add(bytecode, 0x20), mload(bytecode), salt)\n}",
+                  "src": "442:95:0"
+                },
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "arguments": [],
+                    "expression": {
+                      "argumentTypes": [],
+                      "expression": {
+                        "argumentTypes": null,
+                        "arguments": [
+                          {
+                            "argumentTypes": null,
+                            "id": 41,
+                            "name": "fund",
+                            "nodeType": "Identifier",
+                            "overloadedDeclarations": [],
+                            "referencedDeclaration": 21,
+                            "src": "567:4:0",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_address",
+                              "typeString": "address"
+                            }
+                          }
+                        ],
+                        "expression": {
+                          "argumentTypes": [
+                            {
+                              "typeIdentifier": "t_address",
+                              "typeString": "address"
+                            }
+                          ],
+                          "id": 40,
+                          "name": "IDelphiLiquidityFund",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 132,
+                          "src": "546:20:0",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_type$_t_contract$_IDelphiLiquidityFund_$132_$",
+                            "typeString": "type(contract IDelphiLiquidityFund)"
+                          }
+                        },
+                        "id": 42,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": false,
+                        "kind": "typeConversion",
+                        "lValueRequested": false,
+                        "names": [],
+                        "nodeType": "FunctionCall",
+                        "src": "546:26:0",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_contract$_IDelphiLiquidityFund_$132",
+                          "typeString": "contract IDelphiLiquidityFund"
+                        }
+                      },
+                      "id": 43,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "memberName": "initialize",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": 131,
+                      "src": "546:37:0",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_external_nonpayable$__$returns$__$",
+                        "typeString": "function () external"
+                      }
+                    },
+                    "id": 44,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "546:39:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$__$",
+                      "typeString": "tuple()"
+                    }
+                  },
+                  "id": 45,
+                  "nodeType": "ExpressionStatement",
+                  "src": "546:39:0"
+                },
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "id": 49,
+                        "name": "fund",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 21,
+                        "src": "609:4:0",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        }
+                      ],
+                      "expression": {
+                        "argumentTypes": null,
+                        "id": 46,
+                        "name": "allFunds",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 6,
+                        "src": "595:8:0",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_array$_t_address_$dyn_storage",
+                          "typeString": "address[] storage ref"
+                        }
+                      },
+                      "id": 48,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "memberName": "push",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": null,
+                      "src": "595:13:0",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_arraypush_nonpayable$_t_address_$returns$_t_uint256_$",
+                        "typeString": "function (address) returns (uint256)"
+                      }
+                    },
+                    "id": 50,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "595:19:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "id": 51,
+                  "nodeType": "ExpressionStatement",
+                  "src": "595:19:0"
+                },
+                {
+                  "eventCall": {
+                    "argumentTypes": null,
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "id": 53,
+                        "name": "fund",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 21,
+                        "src": "641:4:0",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        }
+                      },
+                      {
+                        "argumentTypes": null,
+                        "expression": {
+                          "argumentTypes": null,
+                          "id": 54,
+                          "name": "allFunds",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 6,
+                          "src": "647:8:0",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_array$_t_address_$dyn_storage",
+                            "typeString": "address[] storage ref"
+                          }
+                        },
+                        "id": 55,
+                        "isConstant": false,
+                        "isLValue": true,
+                        "isPure": false,
+                        "lValueRequested": false,
+                        "memberName": "length",
+                        "nodeType": "MemberAccess",
+                        "referencedDeclaration": null,
+                        "src": "647:15:0",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        },
+                        {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      ],
+                      "id": 52,
+                      "name": "FundCreated",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 12,
+                      "src": "629:11:0",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_event_nonpayable$_t_address_$_t_uint256_$returns$__$",
+                        "typeString": "function (address,uint256)"
+                      }
+                    },
+                    "id": 56,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "629:34:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$__$",
+                      "typeString": "tuple()"
+                    }
+                  },
+                  "id": 57,
+                  "nodeType": "EmitStatement",
+                  "src": "624:39:0"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 59,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "createFund",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 19,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 18,
+                  "name": "token",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 59,
+                  "src": "254:13:0",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 17,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "254:7:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "253:15:0"
+            },
+            "returnParameters": {
+              "id": 22,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 21,
+                  "name": "fund",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 59,
+                  "src": "287:12:0",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 20,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "287:7:0",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "286:14:0"
+            },
+            "scope": 69,
+            "src": "234:436:0",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "external"
+          },
+          {
+            "body": {
+              "id": 67,
+              "nodeType": "Block",
+              "src": "740:32:0",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 65,
+                    "name": "allFunds",
+                    "nodeType": "Identifier",
+                    "overloadedDeclarations": [],
+                    "referencedDeclaration": 6,
+                    "src": "757:8:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_array$_t_address_$dyn_storage",
+                      "typeString": "address[] storage ref"
+                    }
+                  },
+                  "functionReturnParameters": 64,
+                  "id": 66,
+                  "nodeType": "Return",
+                  "src": "750:15:0"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 68,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "getAllFunds",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 60,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "696:2:0"
+            },
+            "returnParameters": {
+              "id": 64,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 63,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 68,
+                  "src": "722:16:0",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_array$_t_address_$dyn_memory_ptr",
+                    "typeString": "address[]"
+                  },
+                  "typeName": {
+                    "baseType": {
+                      "id": 61,
+                      "name": "address",
+                      "nodeType": "ElementaryTypeName",
+                      "src": "722:7:0",
+                      "stateMutability": "nonpayable",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_address",
+                        "typeString": "address"
+                      }
+                    },
+                    "id": 62,
+                    "length": null,
+                    "nodeType": "ArrayTypeName",
+                    "src": "722:9:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_array$_t_address_$dyn_storage_ptr",
+                      "typeString": "address[]"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "721:18:0"
+            },
+            "scope": 69,
+            "src": "676:96:0",
+            "stateMutability": "view",
+            "superFunction": null,
+            "visibility": "external"
+          }
+        ],
+        "scope": 70,
+        "src": "97:677:0"
+      }
+    ],
+    "src": "0:775:0"
+  },
+  "legacyAST": {
+    "attributes": {
+      "absolutePath": "project:/contracts/DelphiFactory.sol",
+      "exportedSymbols": {
+        "DelphiFactory": [
+          69
+        ]
+      }
+    },
+    "children": [
+      {
+        "attributes": {
+          "literals": [
+            "solidity",
+            ">=",
+            "0.5",
+            ".7"
+          ]
+        },
+        "id": 1,
+        "name": "PragmaDirective",
+        "src": "0:24:0"
+      },
+      {
+        "attributes": {
+          "SourceUnit": 217,
+          "absolutePath": "project:/contracts/interfaces/IERC20.sol",
+          "file": "./interfaces/IERC20.sol",
+          "scope": 70,
+          "symbolAliases": [
+            null
+          ],
+          "unitAlias": ""
+        },
+        "id": 2,
+        "name": "ImportDirective",
+        "src": "26:33:0"
+      },
+      {
+        "attributes": {
+          "SourceUnit": 127,
+          "absolutePath": "project:/contracts/DelphiLiquidityFund.sol",
+          "file": "./DelphiLiquidityFund.sol",
+          "scope": 70,
+          "symbolAliases": [
+            null
+          ],
+          "unitAlias": ""
+        },
+        "id": 3,
+        "name": "ImportDirective",
+        "src": "60:35:0"
+      },
+      {
+        "attributes": {
+          "baseContracts": [
+            null
+          ],
+          "contractDependencies": [
+            126
+          ],
+          "contractKind": "contract",
+          "documentation": null,
+          "fullyImplemented": true,
+          "linearizedBaseContracts": [
+            69
+          ],
+          "name": "DelphiFactory",
+          "scope": 70
+        },
+        "children": [
+          {
+            "attributes": {
+              "constant": false,
+              "name": "allFunds",
+              "scope": 69,
+              "stateVariable": true,
+              "storageLocation": "default",
+              "type": "address[]",
+              "value": null,
+              "visibility": "public"
+            },
+            "children": [
+              {
+                "attributes": {
+                  "length": null,
+                  "type": "address[]"
+                },
+                "children": [
+                  {
+                    "attributes": {
+                      "name": "address",
+                      "stateMutability": "nonpayable",
+                      "type": "address"
+                    },
+                    "id": 4,
+                    "name": "ElementaryTypeName",
+                    "src": "126:7:0"
+                  }
+                ],
+                "id": 5,
+                "name": "ArrayTypeName",
+                "src": "126:9:0"
+              }
+            ],
+            "id": 6,
+            "name": "VariableDeclaration",
+            "src": "126:25:0"
+          },
+          {
+            "attributes": {
+              "anonymous": false,
+              "documentation": null,
+              "name": "FundCreated"
+            },
+            "children": [
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "indexed": false,
+                      "name": "fund",
+                      "scope": 12,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "address",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "address",
+                          "stateMutability": "nonpayable",
+                          "type": "address"
+                        },
+                        "id": 7,
+                        "name": "ElementaryTypeName",
+                        "src": "176:7:0"
+                      }
+                    ],
+                    "id": 8,
+                    "name": "VariableDeclaration",
+                    "src": "176:12:0"
+                  },
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "indexed": false,
+                      "name": "",
+                      "scope": 12,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "uint256",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "uint256",
+                          "type": "uint256"
+                        },
+                        "id": 9,
+                        "name": "ElementaryTypeName",
+                        "src": "190:7:0"
+                      }
+                    ],
+                    "id": 10,
+                    "name": "VariableDeclaration",
+                    "src": "190:7:0"
+                  }
+                ],
+                "id": 11,
+                "name": "ParameterList",
+                "src": "175:23:0"
+              }
+            ],
+            "id": 12,
+            "name": "EventDefinition",
+            "src": "158:41:0"
+          },
+          {
+            "attributes": {
+              "documentation": null,
+              "implemented": true,
+              "isConstructor": true,
+              "kind": "constructor",
+              "modifiers": [
+                null
+              ],
+              "name": "",
+              "scope": 69,
+              "stateMutability": "nonpayable",
+              "superFunction": null,
+              "visibility": "public"
+            },
+            "children": [
+              {
+                "attributes": {
+                  "parameters": [
+                    null
+                  ]
+                },
+                "children": [],
+                "id": 13,
+                "name": "ParameterList",
+                "src": "216:2:0"
+              },
+              {
+                "attributes": {
+                  "parameters": [
+                    null
+                  ]
+                },
+                "children": [],
+                "id": 14,
+                "name": "ParameterList",
+                "src": "226:0:0"
+              },
+              {
+                "attributes": {
+                  "statements": [
+                    null
+                  ]
+                },
+                "children": [],
+                "id": 15,
+                "name": "Block",
+                "src": "226:2:0"
+              }
+            ],
+            "id": 16,
+            "name": "FunctionDefinition",
+            "src": "205:23:0"
+          },
+          {
+            "attributes": {
+              "documentation": null,
+              "implemented": true,
+              "isConstructor": false,
+              "kind": "function",
+              "modifiers": [
+                null
+              ],
+              "name": "createFund",
+              "scope": 69,
+              "stateMutability": "nonpayable",
+              "superFunction": null,
+              "visibility": "external"
+            },
+            "children": [
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "name": "token",
+                      "scope": 59,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "uint256",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "uint256",
+                          "type": "uint256"
+                        },
+                        "id": 17,
+                        "name": "ElementaryTypeName",
+                        "src": "254:7:0"
+                      }
+                    ],
+                    "id": 18,
+                    "name": "VariableDeclaration",
+                    "src": "254:13:0"
+                  }
+                ],
+                "id": 19,
+                "name": "ParameterList",
+                "src": "253:15:0"
+              },
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "name": "fund",
+                      "scope": 59,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "address",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "address",
+                          "stateMutability": "nonpayable",
+                          "type": "address"
+                        },
+                        "id": 20,
+                        "name": "ElementaryTypeName",
+                        "src": "287:7:0"
+                      }
+                    ],
+                    "id": 21,
+                    "name": "VariableDeclaration",
+                    "src": "287:12:0"
+                  }
+                ],
+                "id": 22,
+                "name": "ParameterList",
+                "src": "286:14:0"
+              },
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "assignments": [
+                        24
+                      ]
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "constant": false,
+                          "name": "salt",
+                          "scope": 58,
+                          "stateVariable": false,
+                          "storageLocation": "default",
+                          "type": "bytes32",
+                          "value": null,
+                          "visibility": "internal"
+                        },
+                        "children": [
+                          {
+                            "attributes": {
+                              "name": "bytes32",
+                              "type": "bytes32"
+                            },
+                            "id": 23,
+                            "name": "ElementaryTypeName",
+                            "src": "311:7:0"
+                          }
+                        ],
+                        "id": 24,
+                        "name": "VariableDeclaration",
+                        "src": "311:12:0"
+                      },
+                      {
+                        "attributes": {
+                          "argumentTypes": null,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "isStructConstructorCall": false,
+                          "lValueRequested": false,
+                          "names": [
+                            null
+                          ],
+                          "type": "bytes32",
+                          "type_conversion": false
+                        },
+                        "children": [
+                          {
+                            "attributes": {
+                              "argumentTypes": [
+                                {
+                                  "typeIdentifier": "t_bytes_memory_ptr",
+                                  "typeString": "bytes memory"
+                                }
+                              ],
+                              "overloadedDeclarations": [
+                                null
+                              ],
+                              "referencedDeclaration": 225,
+                              "type": "function (bytes memory) pure returns (bytes32)",
+                              "value": "keccak256"
+                            },
+                            "id": 25,
+                            "name": "Identifier",
+                            "src": "326:9:0"
+                          },
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "isConstant": false,
+                              "isLValue": false,
+                              "isPure": false,
+                              "isStructConstructorCall": false,
+                              "lValueRequested": false,
+                              "names": [
+                                null
+                              ],
+                              "type": "bytes memory",
+                              "type_conversion": false
+                            },
+                            "children": [
+                              {
+                                "attributes": {
+                                  "argumentTypes": [
+                                    {
+                                      "typeIdentifier": "t_uint256",
+                                      "typeString": "uint256"
+                                    }
+                                  ],
+                                  "isConstant": false,
+                                  "isLValue": false,
+                                  "isPure": true,
+                                  "lValueRequested": false,
+                                  "member_name": "encodePacked",
+                                  "referencedDeclaration": null,
+                                  "type": "function () pure returns (bytes memory)"
+                                },
+                                "children": [
+                                  {
+                                    "attributes": {
+                                      "argumentTypes": null,
+                                      "overloadedDeclarations": [
+                                        null
+                                      ],
+                                      "referencedDeclaration": 218,
+                                      "type": "abi",
+                                      "value": "abi"
+                                    },
+                                    "id": 26,
+                                    "name": "Identifier",
+                                    "src": "336:3:0"
+                                  }
+                                ],
+                                "id": 27,
+                                "name": "MemberAccess",
+                                "src": "336:16:0"
+                              },
+                              {
+                                "attributes": {
+                                  "argumentTypes": null,
+                                  "overloadedDeclarations": [
+                                    null
+                                  ],
+                                  "referencedDeclaration": 18,
+                                  "type": "uint256",
+                                  "value": "token"
+                                },
+                                "id": 28,
+                                "name": "Identifier",
+                                "src": "353:5:0"
+                              }
+                            ],
+                            "id": 29,
+                            "name": "FunctionCall",
+                            "src": "336:23:0"
+                          }
+                        ],
+                        "id": 30,
+                        "name": "FunctionCall",
+                        "src": "326:34:0"
+                      }
+                    ],
+                    "id": 31,
+                    "name": "VariableDeclarationStatement",
+                    "src": "311:49:0"
+                  },
+                  {
+                    "attributes": {
+                      "assignments": [
+                        33
+                      ]
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "constant": false,
+                          "name": "bytecode",
+                          "scope": 58,
+                          "stateVariable": false,
+                          "storageLocation": "memory",
+                          "type": "bytes",
+                          "value": null,
+                          "visibility": "internal"
+                        },
+                        "children": [
+                          {
+                            "attributes": {
+                              "name": "bytes",
+                              "type": "bytes"
+                            },
+                            "id": 32,
+                            "name": "ElementaryTypeName",
+                            "src": "370:5:0"
+                          }
+                        ],
+                        "id": 33,
+                        "name": "VariableDeclaration",
+                        "src": "370:21:0"
+                      },
+                      {
+                        "attributes": {
+                          "argumentTypes": null,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": true,
+                          "lValueRequested": false,
+                          "member_name": "creationCode",
+                          "referencedDeclaration": null,
+                          "type": "bytes memory"
+                        },
+                        "children": [
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "isConstant": false,
+                              "isLValue": false,
+                              "isPure": true,
+                              "isStructConstructorCall": false,
+                              "lValueRequested": false,
+                              "names": [
+                                null
+                              ],
+                              "type": "type(contract DelphiLiquidityFund)",
+                              "type_conversion": false
+                            },
+                            "children": [
+                              {
+                                "attributes": {
+                                  "argumentTypes": [
+                                    {
+                                      "typeIdentifier": "t_type$_t_contract$_DelphiLiquidityFund_$126_$",
+                                      "typeString": "type(contract DelphiLiquidityFund)"
+                                    }
+                                  ],
+                                  "overloadedDeclarations": [
+                                    null
+                                  ],
+                                  "referencedDeclaration": 244,
+                                  "type": "function (address) pure",
+                                  "value": "type"
+                                },
+                                "id": 34,
+                                "name": "Identifier",
+                                "src": "394:4:0"
+                              },
+                              {
+                                "attributes": {
+                                  "argumentTypes": null,
+                                  "overloadedDeclarations": [
+                                    null
+                                  ],
+                                  "referencedDeclaration": 126,
+                                  "type": "type(contract DelphiLiquidityFund)",
+                                  "value": "DelphiLiquidityFund"
+                                },
+                                "id": 35,
+                                "name": "Identifier",
+                                "src": "399:19:0"
+                              }
+                            ],
+                            "id": 36,
+                            "name": "FunctionCall",
+                            "src": "394:25:0"
+                          }
+                        ],
+                        "id": 37,
+                        "name": "MemberAccess",
+                        "src": "394:38:0"
+                      }
+                    ],
+                    "id": 38,
+                    "name": "VariableDeclarationStatement",
+                    "src": "370:62:0"
+                  },
+                  {
+                    "attributes": {
+                      "externalReferences": [
+                        {
+                          "fund": {
+                            "declaration": 21,
+                            "isOffset": false,
+                            "isSlot": false,
+                            "src": "465:4:0",
+                            "valueSize": 1
+                          }
+                        },
+                        {
+                          "bytecode": {
+                            "declaration": 33,
+                            "isOffset": false,
+                            "isSlot": false,
+                            "src": "511:8:0",
+                            "valueSize": 1
+                          }
+                        },
+                        {
+                          "bytecode": {
+                            "declaration": 33,
+                            "isOffset": false,
+                            "isSlot": false,
+                            "src": "488:8:0",
+                            "valueSize": 1
+                          }
+                        },
+                        {
+                          "salt": {
+                            "declaration": 24,
+                            "isOffset": false,
+                            "isSlot": false,
+                            "src": "522:4:0",
+                            "valueSize": 1
+                          }
+                        }
+                      ],
+                      "operations": "{\n    fund := create2(0, add(bytecode, 0x20), mload(bytecode), salt)\n}"
+                    },
+                    "children": [],
+                    "id": 39,
+                    "name": "InlineAssembly",
+                    "src": "442:95:0"
+                  },
+                  {
+                    "children": [
+                      {
+                        "attributes": {
+                          "argumentTypes": null,
+                          "arguments": [
+                            null
+                          ],
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "isStructConstructorCall": false,
+                          "lValueRequested": false,
+                          "names": [
+                            null
+                          ],
+                          "type": "tuple()",
+                          "type_conversion": false
+                        },
+                        "children": [
+                          {
+                            "attributes": {
+                              "argumentTypes": [
+                                null
+                              ],
+                              "isConstant": false,
+                              "isLValue": false,
+                              "isPure": false,
+                              "lValueRequested": false,
+                              "member_name": "initialize",
+                              "referencedDeclaration": 131,
+                              "type": "function () external"
+                            },
+                            "children": [
+                              {
+                                "attributes": {
+                                  "argumentTypes": null,
+                                  "isConstant": false,
+                                  "isLValue": false,
+                                  "isPure": false,
+                                  "isStructConstructorCall": false,
+                                  "lValueRequested": false,
+                                  "names": [
+                                    null
+                                  ],
+                                  "type": "contract IDelphiLiquidityFund",
+                                  "type_conversion": true
+                                },
+                                "children": [
+                                  {
+                                    "attributes": {
+                                      "argumentTypes": [
+                                        {
+                                          "typeIdentifier": "t_address",
+                                          "typeString": "address"
+                                        }
+                                      ],
+                                      "overloadedDeclarations": [
+                                        null
+                                      ],
+                                      "referencedDeclaration": 132,
+                                      "type": "type(contract IDelphiLiquidityFund)",
+                                      "value": "IDelphiLiquidityFund"
+                                    },
+                                    "id": 40,
+                                    "name": "Identifier",
+                                    "src": "546:20:0"
+                                  },
+                                  {
+                                    "attributes": {
+                                      "argumentTypes": null,
+                                      "overloadedDeclarations": [
+                                        null
+                                      ],
+                                      "referencedDeclaration": 21,
+                                      "type": "address",
+                                      "value": "fund"
+                                    },
+                                    "id": 41,
+                                    "name": "Identifier",
+                                    "src": "567:4:0"
+                                  }
+                                ],
+                                "id": 42,
+                                "name": "FunctionCall",
+                                "src": "546:26:0"
+                              }
+                            ],
+                            "id": 43,
+                            "name": "MemberAccess",
+                            "src": "546:37:0"
+                          }
+                        ],
+                        "id": 44,
+                        "name": "FunctionCall",
+                        "src": "546:39:0"
+                      }
+                    ],
+                    "id": 45,
+                    "name": "ExpressionStatement",
+                    "src": "546:39:0"
+                  },
+                  {
+                    "children": [
+                      {
+                        "attributes": {
+                          "argumentTypes": null,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "isStructConstructorCall": false,
+                          "lValueRequested": false,
+                          "names": [
+                            null
+                          ],
+                          "type": "uint256",
+                          "type_conversion": false
+                        },
+                        "children": [
+                          {
+                            "attributes": {
+                              "argumentTypes": [
+                                {
+                                  "typeIdentifier": "t_address",
+                                  "typeString": "address"
+                                }
+                              ],
+                              "isConstant": false,
+                              "isLValue": false,
+                              "isPure": false,
+                              "lValueRequested": false,
+                              "member_name": "push",
+                              "referencedDeclaration": null,
+                              "type": "function (address) returns (uint256)"
+                            },
+                            "children": [
+                              {
+                                "attributes": {
+                                  "argumentTypes": null,
+                                  "overloadedDeclarations": [
+                                    null
+                                  ],
+                                  "referencedDeclaration": 6,
+                                  "type": "address[] storage ref",
+                                  "value": "allFunds"
+                                },
+                                "id": 46,
+                                "name": "Identifier",
+                                "src": "595:8:0"
+                              }
+                            ],
+                            "id": 48,
+                            "name": "MemberAccess",
+                            "src": "595:13:0"
+                          },
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "overloadedDeclarations": [
+                                null
+                              ],
+                              "referencedDeclaration": 21,
+                              "type": "address",
+                              "value": "fund"
+                            },
+                            "id": 49,
+                            "name": "Identifier",
+                            "src": "609:4:0"
+                          }
+                        ],
+                        "id": 50,
+                        "name": "FunctionCall",
+                        "src": "595:19:0"
+                      }
+                    ],
+                    "id": 51,
+                    "name": "ExpressionStatement",
+                    "src": "595:19:0"
+                  },
+                  {
+                    "children": [
+                      {
+                        "attributes": {
+                          "argumentTypes": null,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "isStructConstructorCall": false,
+                          "lValueRequested": false,
+                          "names": [
+                            null
+                          ],
+                          "type": "tuple()",
+                          "type_conversion": false
+                        },
+                        "children": [
+                          {
+                            "attributes": {
+                              "argumentTypes": [
+                                {
+                                  "typeIdentifier": "t_address",
+                                  "typeString": "address"
+                                },
+                                {
+                                  "typeIdentifier": "t_uint256",
+                                  "typeString": "uint256"
+                                }
+                              ],
+                              "overloadedDeclarations": [
+                                null
+                              ],
+                              "referencedDeclaration": 12,
+                              "type": "function (address,uint256)",
+                              "value": "FundCreated"
+                            },
+                            "id": 52,
+                            "name": "Identifier",
+                            "src": "629:11:0"
+                          },
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "overloadedDeclarations": [
+                                null
+                              ],
+                              "referencedDeclaration": 21,
+                              "type": "address",
+                              "value": "fund"
+                            },
+                            "id": 53,
+                            "name": "Identifier",
+                            "src": "641:4:0"
+                          },
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "isConstant": false,
+                              "isLValue": true,
+                              "isPure": false,
+                              "lValueRequested": false,
+                              "member_name": "length",
+                              "referencedDeclaration": null,
+                              "type": "uint256"
+                            },
+                            "children": [
+                              {
+                                "attributes": {
+                                  "argumentTypes": null,
+                                  "overloadedDeclarations": [
+                                    null
+                                  ],
+                                  "referencedDeclaration": 6,
+                                  "type": "address[] storage ref",
+                                  "value": "allFunds"
+                                },
+                                "id": 54,
+                                "name": "Identifier",
+                                "src": "647:8:0"
+                              }
+                            ],
+                            "id": 55,
+                            "name": "MemberAccess",
+                            "src": "647:15:0"
+                          }
+                        ],
+                        "id": 56,
+                        "name": "FunctionCall",
+                        "src": "629:34:0"
+                      }
+                    ],
+                    "id": 57,
+                    "name": "EmitStatement",
+                    "src": "624:39:0"
+                  }
+                ],
+                "id": 58,
+                "name": "Block",
+                "src": "301:369:0"
+              }
+            ],
+            "id": 59,
+            "name": "FunctionDefinition",
+            "src": "234:436:0"
+          },
+          {
+            "attributes": {
+              "documentation": null,
+              "implemented": true,
+              "isConstructor": false,
+              "kind": "function",
+              "modifiers": [
+                null
+              ],
+              "name": "getAllFunds",
+              "scope": 69,
+              "stateMutability": "view",
+              "superFunction": null,
+              "visibility": "external"
+            },
+            "children": [
+              {
+                "attributes": {
+                  "parameters": [
+                    null
+                  ]
+                },
+                "children": [],
+                "id": 60,
+                "name": "ParameterList",
+                "src": "696:2:0"
+              },
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "name": "",
+                      "scope": 68,
+                      "stateVariable": false,
+                      "storageLocation": "memory",
+                      "type": "address[]",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "length": null,
+                          "type": "address[]"
+                        },
+                        "children": [
+                          {
+                            "attributes": {
+                              "name": "address",
+                              "stateMutability": "nonpayable",
+                              "type": "address"
+                            },
+                            "id": 61,
+                            "name": "ElementaryTypeName",
+                            "src": "722:7:0"
+                          }
+                        ],
+                        "id": 62,
+                        "name": "ArrayTypeName",
+                        "src": "722:9:0"
+                      }
+                    ],
+                    "id": 63,
+                    "name": "VariableDeclaration",
+                    "src": "722:16:0"
+                  }
+                ],
+                "id": 64,
+                "name": "ParameterList",
+                "src": "721:18:0"
+              },
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "functionReturnParameters": 64
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "argumentTypes": null,
+                          "overloadedDeclarations": [
+                            null
+                          ],
+                          "referencedDeclaration": 6,
+                          "type": "address[] storage ref",
+                          "value": "allFunds"
+                        },
+                        "id": 65,
+                        "name": "Identifier",
+                        "src": "757:8:0"
+                      }
+                    ],
+                    "id": 66,
+                    "name": "Return",
+                    "src": "750:15:0"
+                  }
+                ],
+                "id": 67,
+                "name": "Block",
+                "src": "740:32:0"
+              }
+            ],
+            "id": 68,
+            "name": "FunctionDefinition",
+            "src": "676:96:0"
+          }
+        ],
+        "id": 69,
+        "name": "ContractDefinition",
+        "src": "97:677:0"
+      }
+    ],
+    "id": 70,
+    "name": "SourceUnit",
+    "src": "0:775:0"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.5.16+commit.9c3226ce.Emscripten.clang"
+  },
+  "networks": {
+    "5777": {
+      "events": {},
+      "links": {},
+      "address": "0xfa10002C255C2e16453d5feFd2E7b2b24Fa524c4",
+      "transactionHash": "0xc3c35fa42980d968c44d4f4de2dd5f3b42132e535911154d55c95c7bfc263a0f"
+    }
+  },
+  "schemaVersion": "3.4.3",
+  "updatedAt": "2021-11-14T04:38:07.650Z",
+  "networkType": "ethereum",
+  "devdoc": {
+    "methods": {}
+  },
+  "userdoc": {
+    "methods": {}
+  }
+}
